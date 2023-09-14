@@ -1,4 +1,4 @@
-import { Container, Grid, IconButton, Button, Typography } from "@mui/material";
+import { Box, Container, Grid, IconButton, Typography } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -6,28 +6,29 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 const Footer = () => {
   return (
     <Container maxWidth="lg">
-      <Grid container justifyContent="space-evenly">
+      <Grid container justifyContent="space-evenly" border={1}>
         <Grid
           item
           xs={12}
-          md={6}
-          border={1}
+          md={8}
           display="flex"
           justifyContent="space-between"
           padding={2}
         >
-          <Typography variant="h6" textAlign="center">
-            Bookcode ©{new Date().getFullYear()}
-          </Typography>
-          <Button variant="outlined" color="info">
-            <Typography variant="body1">Contact Us!</Typography>
-          </Button>
+          <Box>
+            <Typography variant="h6" textAlign="center">
+              Bookcode ©{new Date().getFullYear()}
+            </Typography>
+            <Typography variant="caption" textAlign="center">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur
+              quos amet provident voluptates,
+            </Typography>
+          </Box>
         </Grid>
         <Grid
           item
           xs={12}
-          md={6}
-          border={1}
+          md={4}
           display="flex"
           justifyContent="space-around"
           alignItems="center"
